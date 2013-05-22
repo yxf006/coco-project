@@ -124,6 +124,26 @@
   <ItemGroup>
     <None Include="..\Resources\CloseNormal.png" />
     <None Include="..\Resources\CloseSelected.png" />
+    <None Include="..\Resources\fonts\arial-unicode-26.png" />
+    <None Include="..\Resources\fonts\arial16.png" />
+    <None Include="..\Resources\fonts\bitmapFontChinese.png" />
+    <None Include="..\Resources\fonts\bitmapFontTest.png" />
+    <None Include="..\Resources\fonts\bitmapFontTest2.bmp" />
+    <None Include="..\Resources\fonts\bitmapFontTest2.png" />
+    <None Include="..\Resources\fonts\bitmapFontTest3.png" />
+    <None Include="..\Resources\fonts\bitmapFontTest4.png" />
+    <None Include="..\Resources\fonts\bitmapFontTest5.png" />
+    <None Include="..\Resources\fonts\boundsTestFont.png" />
+    <None Include="..\Resources\fonts\font-issue1343-hd.png" />
+    <None Include="..\Resources\fonts\font-issue1343.png" />
+    <None Include="..\Resources\fonts\futura-48.png" />
+    <None Include="..\Resources\fonts\helvetica-geneva-32.png" />
+    <None Include="..\Resources\fonts\konqa32.png" />
+    <None Include="..\Resources\fonts\labelatlas.png" />
+    <None Include="..\Resources\fonts\larabie-16.png" />
+    <None Include="..\Resources\fonts\markerFelt.png" />
+    <None Include="..\Resources\fonts\tuffy_bold_italic-charmap.png" />
+    <None Include="..\Resources\fonts\west_england-64.png" />
     <None Include="..\Resources\HelloWorld.png" />
     <None Include="res\test1.ico" />
   </ItemGroup>
@@ -134,12 +154,14 @@
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="MenuLayerMainMenu.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuLayerMainMenu.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

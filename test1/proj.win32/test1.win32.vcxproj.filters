@@ -27,6 +27,66 @@
     <None Include="..\Resources\HelloWorld.png">
       <Filter>resource</Filter>
     </None>
+    <None Include="..\Resources\fonts\west_england-64.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\arial16.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\arial-unicode-26.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\bitmapFontChinese.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\bitmapFontTest2.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\bitmapFontTest2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\bitmapFontTest3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\bitmapFontTest4.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\bitmapFontTest5.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\bitmapFontTest.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\boundsTestFont.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\font-issue1343.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\font-issue1343-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\futura-48.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\helvetica-geneva-32.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\konqa32.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\labelatlas.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\larabie-16.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\markerFelt.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fonts\tuffy_bold_italic-charmap.png">
+      <Filter>resource</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="test1.rc">
@@ -46,6 +106,9 @@
     <ClInclude Include="..\Classes\HelloWorldScene.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="MenuLayerMainMenu.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -55,6 +118,9 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuLayerMainMenu.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

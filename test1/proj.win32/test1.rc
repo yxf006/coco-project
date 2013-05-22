@@ -7,20 +7,80 @@
 //
 // Generated from the TEXTINCLUDE 2 resource.
 //
-#define APSTUDIO_HIDDEN_SYMBOLS
-#include "windows.h"
-#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "afxres.h"
+
 /////////////////////////////////////////////////////////////////////////////
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.S.) resources
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDB_PNG1                PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\west_england-64.png"
+IDB_PNG2                PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\arial16.png"
+IDB_PNG3                PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\arial-unicode-26.png"
+IDB_PNG4                PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\bitmapFontChinese.png"
+IDB_PNG5                PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\bitmapFontTest2.png"
+IDB_PNG6                PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\bitmapFontTest3.png"
+IDB_PNG7                PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\bitmapFontTest4.png"
+IDB_PNG8                PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\bitmapFontTest5.png"
+IDB_PNG9                PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\bitmapFontTest.png"
+IDB_PNG10               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\boundsTestFont.png"
+IDB_PNG11               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\font-issue1343.png"
+IDB_PNG12               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\font-issue1343-hd.png"
+IDB_PNG13               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\futura-48.png"
+IDB_PNG14               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\helvetica-geneva-32.png"
+IDB_PNG15               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\konqa32.png"
+IDB_PNG16               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\labelatlas.png"
+IDB_PNG17               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\larabie-16.png"
+IDB_PNG18               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\markerFelt.png"
+IDB_PNG19               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\tuffy_bold_italic-charmap.png"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\bitmapFontTest2.bmp"
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -34,6 +94,7 @@ BEGIN
 END
 
 #endif    // APSTUDIO_INVOKED
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -66,21 +127,33 @@ BEGIN
     BEGIN
         BLOCK "040904B0"
         BEGIN
-            VALUE "CompanyName", "\0"
-            VALUE "FileDescription", "test1 Module\0"
-            VALUE "FileVersion", "1, 0, 0, 1\0"
-            VALUE "InternalName", "test1\0"
-            VALUE "LegalCopyright", "Copyright \0"
-            VALUE "OriginalFilename", "test1.exe\0"
-            VALUE "ProductName", "test1 Module\0"
-            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "FileDescription", "test1 Module"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "test1"
+            VALUE "LegalCopyright", "Copyright "
+            VALUE "OriginalFilename", "test1.exe"
+            VALUE "ProductName", "test1 Module"
+            VALUE "ProductVersion", "1, 0, 0, 1"
         END
     END
     BLOCK "VarFileInfo"
     BEGIN
-        VALUE "Translation", 0x0409, 0x04B0
+        VALUE "Translation", 0x409, 1200
     END
 END
 
+#endif    // 英语(美国) resources
 /////////////////////////////////////////////////////////////////////////////
-#endif // !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
