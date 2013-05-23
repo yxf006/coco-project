@@ -10,6 +10,6 @@ public:
 	MenuLayerMainMenu(void);
 	~MenuLayerMainMenu(void);
 public:
-	void menuCallbackConfig(CCObject* pSender);
+	void menuCallback(CCObject* pSender);
 };
 

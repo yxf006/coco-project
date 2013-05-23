@@ -27,7 +27,25 @@
     <None Include="..\Resources\HelloWorld.png">
       <Filter>resource</Filter>
     </None>
-    <None Include="..\Resources\fonts\west_england-64.png">
+    <None Include="..\Resources\fonts\bitmapFontTest2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\images\b1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\images\b2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\images\f1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\images\f2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\images\Icon.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\images\Pea.png">
       <Filter>resource</Filter>
     </None>
     <None Include="..\Resources\fonts\arial16.png">
@@ -37,12 +55,6 @@
       <Filter>resource</Filter>
     </None>
     <None Include="..\Resources\fonts\bitmapFontChinese.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="..\Resources\fonts\bitmapFontTest2.bmp">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="..\Resources\fonts\bitmapFontTest2.png">
       <Filter>resource</Filter>
     </None>
     <None Include="..\Resources\fonts\bitmapFontTest3.png">
@@ -87,6 +99,12 @@
     <None Include="..\Resources\fonts\tuffy_bold_italic-charmap.png">
       <Filter>resource</Filter>
     </None>
+    <None Include="..\Resources\images\r2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\images\r1.png">
+      <Filter>resource</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="test1.rc">
@@ -109,6 +127,9 @@
     <ClInclude Include="MenuLayerMainMenu.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="MenuLayerPlayerSelect.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -121,6 +142,9 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="MenuLayerMainMenu.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuLayerPlayerSelect.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

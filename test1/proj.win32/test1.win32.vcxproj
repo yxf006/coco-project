@@ -128,7 +128,6 @@
     <None Include="..\Resources\fonts\arial16.png" />
     <None Include="..\Resources\fonts\bitmapFontChinese.png" />
     <None Include="..\Resources\fonts\bitmapFontTest.png" />
-    <None Include="..\Resources\fonts\bitmapFontTest2.bmp" />
     <None Include="..\Resources\fonts\bitmapFontTest2.png" />
     <None Include="..\Resources\fonts\bitmapFontTest3.png" />
     <None Include="..\Resources\fonts\bitmapFontTest4.png" />
@@ -143,8 +142,15 @@
     <None Include="..\Resources\fonts\larabie-16.png" />
     <None Include="..\Resources\fonts\markerFelt.png" />
     <None Include="..\Resources\fonts\tuffy_bold_italic-charmap.png" />
-    <None Include="..\Resources\fonts\west_england-64.png" />
     <None Include="..\Resources\HelloWorld.png" />
+    <None Include="..\Resources\images\b1.png" />
+    <None Include="..\Resources\images\b2.png" />
+    <None Include="..\Resources\images\f1.png" />
+    <None Include="..\Resources\images\f2.png" />
+    <None Include="..\Resources\images\Icon.png" />
+    <None Include="..\Resources\images\Pea.png" />
+    <None Include="..\Resources\images\r1.png" />
+    <None Include="..\Resources\images\r2.png" />
     <None Include="res\test1.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +161,7 @@
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="MenuLayerMainMenu.h" />
+    <ClInclude Include="MenuLayerPlayerSelect.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +169,7 @@
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuLayerMainMenu.cpp" />
+    <ClCompile Include="MenuLayerPlayerSelect.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

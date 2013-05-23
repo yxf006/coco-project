@@ -45,7 +45,6 @@ END
 // PNG
 //
 
-IDB_PNG1                PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\west_england-64.png"
 IDB_PNG2                PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\arial16.png"
 IDB_PNG3                PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\arial-unicode-26.png"
 IDB_PNG4                PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\bitmapFontChinese.png"
@@ -64,13 +63,14 @@ IDB_PNG16               PNG                     "E:\\Cocos2dx-Project\\test1\\te
 IDB_PNG17               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\larabie-16.png"
 IDB_PNG18               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\markerFelt.png"
 IDB_PNG19               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\tuffy_bold_italic-charmap.png"
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// Bitmap
-//
-
-IDB_BITMAP1             BITMAP                  "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\fonts\\bitmapFontTest2.bmp"
+IDB_PNG20               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\images\\b1.png"
+IDB_PNG21               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\images\\b2.png"
+IDB_PNG22               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\images\\f1.png"
+IDB_PNG23               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\images\\f2.png"
+IDB_PNG24               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\images\\Icon.png"
+IDB_PNG25               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\images\\Pea.png"
+IDB_PNG26               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\images\\r2.png"
+IDB_PNG27               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\images\\r1.png"
 #endif    // 中文(简体，中国) resources
 /////////////////////////////////////////////////////////////////////////////
 
