@@ -105,6 +105,15 @@
     <None Include="..\Resources\images\r1.png">
       <Filter>resource</Filter>
     </None>
+    <None Include="..\Resources\pause.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\play.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\Monster.png">
+      <Filter>resource</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="test1.rc">

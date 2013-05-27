@@ -151,6 +151,9 @@
     <None Include="..\Resources\images\Pea.png" />
     <None Include="..\Resources\images\r1.png" />
     <None Include="..\Resources\images\r2.png" />
+    <None Include="..\Resources\Monster.png" />
+    <None Include="..\Resources\pause.png" />
+    <None Include="..\Resources\play.png" />
     <None Include="res\test1.ico" />
   </ItemGroup>
   <ItemGroup>
