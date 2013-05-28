@@ -114,6 +114,9 @@
     <None Include="..\Resources\Monster.png">
       <Filter>resource</Filter>
     </None>
+    <None Include="..\Resources\bullet.png">
+      <Filter>resource</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="test1.rc">
@@ -139,6 +142,9 @@
     <ClInclude Include="MenuLayerPlayerSelect.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="GamingLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -154,6 +160,9 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="MenuLayerPlayerSelect.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="GamingLayer.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

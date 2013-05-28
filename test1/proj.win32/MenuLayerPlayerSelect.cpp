@@ -155,10 +155,13 @@ void MenuLayerPlayerSelect::ccTouchEnded( CCTouch *pTouch, CCEvent *pEvent )
 
 	if (pHero1->boundingBox().containsPoint(touchpoint))
 	{
-		CCMessageBox("Hero1 selected","");
+		//CCMessageBox("Hero1 selected","");
+		CCDirector::sharedDirector()->pushScene(GamingLayer::scene(1));
+
 	}else if(pHero6->boundingBox().containsPoint(touchpoint))
 	{
-		CCMessageBox("Hero6 selected","");
+		//CCMessageBox("Hero6 selected","");
+		CCDirector::sharedDirector()->pushScene(GamingLayer::scene(6));
 	}else
 	{
 		//CCMessageBox("No selected","");

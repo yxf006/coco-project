@@ -36,8 +36,8 @@ MenuLayerMainMenu::MenuLayerMainMenu( void )
 	mainmenu->addChild(item_exit,1000+6);
 
 
-	mainmenu->alignItemsVertically();
-
+	//mainmenu->alignItemsVertically();
+	mainmenu->alignItemsVerticallyWithPadding(10);
 
 	CCSize s=CCDirector::sharedDirector()->getWinSize();
 	int i=0;

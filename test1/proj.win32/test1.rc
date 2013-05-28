@@ -74,6 +74,7 @@ IDB_PNG27               PNG                     "E:\\Cocos2dx-Project\\test1\\te
 IDB_PNG28               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\pause.png"
 IDB_PNG29               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\play.png"
 IDB_PNG30               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\Monster.png"
+IDB_PNG31               PNG                     "E:\\Cocos2dx-Project\\test1\\test1\\Resources\\bullet.png"
 #endif    // 中文(简体，中国) resources
 /////////////////////////////////////////////////////////////////////////////
 

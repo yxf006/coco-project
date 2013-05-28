@@ -122,6 +122,7 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="..\Resources\bullet.png" />
     <None Include="..\Resources\CloseNormal.png" />
     <None Include="..\Resources\CloseSelected.png" />
     <None Include="..\Resources\fonts\arial-unicode-26.png" />
@@ -162,6 +163,7 @@
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="GamingLayer.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="MenuLayerMainMenu.h" />
     <ClInclude Include="MenuLayerPlayerSelect.h" />
@@ -170,6 +172,7 @@
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="GamingLayer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuLayerMainMenu.cpp" />
     <ClCompile Include="MenuLayerPlayerSelect.cpp" />
