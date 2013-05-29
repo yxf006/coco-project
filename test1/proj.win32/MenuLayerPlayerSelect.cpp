@@ -47,13 +47,13 @@ bool MenuLayerPlayerSelect::init()
 
 		pHero1=CCSprite::createWithSpriteFrameName("Monster1.png");
 		pHero1->setPosition(ccp(s.width/2,s.height/2));
-		pHero1->setScale(1.5f);
+		//pHero1->setScale(1.5f);
 		pHero1->setRotation(180);
 		this->addChild(pHero1);
 
 		pHero6=CCSprite::createWithSpriteFrameName("Monster6.png");
 		pHero6->setPosition(ccp(s.width+pHero6->getContentSize().width,s.height/2));
-		pHero6->setScale(1.5f);
+		//pHero6->setScale(1.5f);
 		pHero6->setRotation(180);
 		this->addChild(pHero6);
 

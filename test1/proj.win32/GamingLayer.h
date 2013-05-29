@@ -1,5 +1,8 @@
 #pragma once
 #include "cocos2d.h"
+#include "HeroBulletManager.h"
+#include "Enemies.h"
+
 
 USING_NS_CC;
 
@@ -12,7 +15,7 @@ public:
 
 public:
 	bool init(int index_hero);
-	
+	void initLayer();
 
 	static CCScene* scene(int index_hero);
 
@@ -26,8 +29,8 @@ public:
 
 
 	virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
-	/*virtual void ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent);
-	virtual void ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent);
+	virtual void ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent);
+	/*virtual void ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent);
 	virtual void ccTouchCancelled(CCTouch *pTouch, CCEvent *pEvent);
 */
 	/*virtual void ccTouchesBegan(CCSet *pTouches, CCEvent *pEvent);
@@ -40,11 +43,20 @@ public:
 
 	bool GetHero(int index_hero);
 
-	
+	void Background_Scroll(float t);
+
+	void Hero_Fire(float t);
+
+	void Enemy_Add(float t);
+
 
 private:
 	CCSize s;
+	int m_index_hero;
 	CCSprite* m_hero;
+	HeroBulletManager* m_HeroBulletManager;
+
+	Enemies* m_Enemies;
 
 };
 

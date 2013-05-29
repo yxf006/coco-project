@@ -17,9 +17,8 @@ bool GamingLayer::init( int index_hero )
 	{
 		return false;
 	}
-
-	GetHero(index_hero);
-	
+	m_index_hero=index_hero;
+	initLayer();
 	setTouchEnabled(true);
 	return true;
 
@@ -64,7 +63,8 @@ bool GamingLayer::GetHero( int index_hero )
 	//}
 
 	m_hero=CCSprite::createWithSpriteFrameName(HeroFrameName->getCString());
-	m_hero->setPosition(ccp(s.width/2,s.height/2));
+	m_hero->setPosition(ccp(s.width/2,m_hero->getContentSize().height+5));
+	//m_hero->setPosition(ccp(s.width/2,s.height/2));
 	//m_hero->setScale(1.0f);
 	m_hero->setRotation(180);
 	this->addChild(m_hero);
@@ -94,6 +94,73 @@ void GamingLayer::registerWithTouchDispatcher( void )
 
 }
 
+
+
+void GamingLayer::Hero_Fire( float t )
+{
+	int bullettype;
+	switch (m_index_hero){
+	case 1:
+		bullettype=1;
+		break;
+	case 6:
+		bullettype=2;
+		break;
+	default:
+		bullettype=1;
+		break;
+	}
+	m_HeroBulletManager->AddNewBullet(m_hero->getPosition(),m_hero->getContentSize(),bullettype);
+}
+
+
+void GamingLayer::initLayer()
+{
+	do 
+	{
+
+		//set background
+
+		CCSprite* bg1=CCSprite::create("bg01.png");
+		CCSprite* bg2=CCSprite::create("bg01.png");
+
+		CC_BREAK_IF(!bg1);
+		CC_BREAK_IF(!bg2);
+
+		bg1->setAnchorPoint(CCPointZero);
+		bg2->setAnchorPoint(CCPointZero);
+
+		bg1->setPosition(CCPointZero);
+		bg2->setPosition(ccp(0,bg1->getContentSize().height));
+
+		addChild(bg1,0,11);
+		addChild(bg2,0,12);
+
+		this->schedule(schedule_selector(GamingLayer::Background_Scroll),0.05f);
+
+		//get hero
+		GetHero(m_index_hero);
+
+		m_HeroBulletManager=HeroBulletManager::create();
+
+		this->addChild(m_HeroBulletManager);
+
+		this->schedule(schedule_selector(GamingLayer::Hero_Fire),0.08f);
+
+
+		//add enemy
+		m_Enemies=Enemies::create();
+		this->addChild(m_Enemies);
+
+		this->Enemy_Add(1);
+
+	} while (0);
+	
+
+}
+
+
+
 bool GamingLayer::ccTouchBegan( CCTouch *pTouch, CCEvent *pEvent )
 {
 	//CCPoint touchpoint=convertTouchToNodeSpace(pTouch);
@@ -103,5 +170,47 @@ bool GamingLayer::ccTouchBegan( CCTouch *pTouch, CCEvent *pEvent )
 	//m_hero->setAnchorPoint(ccp(m_hero->getContentSize().width/2,m_hero->getContentSize().height/2));
 	//m_hero->setPosition(pTouch->getLocation());//不用加这句，否则hero在界面上滑来滑去，无法定位。
 	//m_hero->setPosition(touchpoint);
-	return false;
+	return true;
 }
+
+
+void GamingLayer::ccTouchMoved( CCTouch *pTouch, CCEvent *pEvent )
+{
+	CCPoint touchpoint=pTouch->getLocation();
+	CCPoint oldtouchpoint=pTouch->getPreviousLocation();
+	CCPoint translateion=ccpSub(touchpoint,oldtouchpoint);
+	CCPoint newpoint=ccpAdd(m_hero->getPosition(),translateion);
+	//m_hero->setPosition(newpoint);//也可以的
+	CCMoveTo* moveaction=CCMoveTo::create(0.02f,newpoint);
+	m_hero->runAction(moveaction);
+	
+
+}
+
+void GamingLayer::Enemy_Add( float t )
+{
+	m_Enemies->AddEnemy(1);
+
+}
+
+void GamingLayer::Background_Scroll( float t )
+{
+	CCSprite* bg1=(CCSprite*)getChildByTag(11);
+	CCSprite* bg2=(CCSprite*)getChildByTag(12);
+
+	/*bg1->setPosition(ccp(bg1->getPositionX(),bg1->getPositionY()-10));
+	bg2->setPosition(ccp(bg2->getPositionX(),bg1->getPositionY()+bg1->getContentSize().height));
+
+	if (bg2->getPositionY()<=0)
+	{
+		bg1->setPosition(CCPointZero);
+	}*/
+	bg1->setPositionY(bg1->getPositionY()-10);
+	bg2->setPositionY(bg1->getPositionY()+bg1->getContentSize().height);
+
+	if (bg2->getPositionY()<=0)
+	{
+		bg1->setPositionY(0);
+	}
+}
+

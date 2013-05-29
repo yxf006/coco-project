@@ -117,6 +117,12 @@
     <None Include="..\Resources\bullet.png">
       <Filter>resource</Filter>
     </None>
+    <None Include="..\Resources\Enemy.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\bg01.png">
+      <Filter>resource</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="test1.rc">
@@ -145,6 +151,12 @@
     <ClInclude Include="GamingLayer.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="HeroBulletManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemies.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -163,6 +175,12 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="GamingLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="HeroBulletManager.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemies.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
