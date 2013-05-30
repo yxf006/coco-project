@@ -37,13 +37,14 @@
 #define IDB_PNG31                       234
 #define IDB_PNG32                       235
 #define IDB_PNG33                       238
+#define IDB_PNG34                       239
 #define ID_FILE_NEW_WINDOW              32771
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        239
+#define _APS_NEXT_RESOURCE_VALUE        240
 #define _APS_NEXT_COMMAND_VALUE         32775
 #define _APS_NEXT_CONTROL_VALUE         1000
 #define _APS_NEXT_SYMED_VALUE           101

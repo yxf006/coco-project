@@ -41,13 +41,17 @@ public:
 
 	virtual void registerWithTouchDispatcher(void);
 
-	bool GetHero(int index_hero);
+	bool BornHero(int index_hero);
 
 	void Background_Scroll(float t);
 
 	void Hero_Fire(float t);
 
 	void Enemy_Add(float t);
+
+	Enemies* m_Enemies;
+
+	CCSprite* GetHero();
 
 
 private:
@@ -56,7 +60,7 @@ private:
 	CCSprite* m_hero;
 	HeroBulletManager* m_HeroBulletManager;
 
-	Enemies* m_Enemies;
+
 
 };
 

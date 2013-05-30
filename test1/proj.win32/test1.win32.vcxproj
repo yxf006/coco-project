@@ -127,6 +127,7 @@
     <None Include="..\Resources\CloseNormal.png" />
     <None Include="..\Resources\CloseSelected.png" />
     <None Include="..\Resources\Enemy.png" />
+    <None Include="..\Resources\explosion.png" />
     <None Include="..\Resources\fonts\arial-unicode-26.png" />
     <None Include="..\Resources\fonts\arial16.png" />
     <None Include="..\Resources\fonts\bitmapFontChinese.png" />
@@ -165,6 +166,7 @@
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="Effects.h" />
     <ClInclude Include="Enemies.h" />
     <ClInclude Include="GamingLayer.h" />
     <ClInclude Include="HeroBulletManager.h" />
@@ -176,6 +178,7 @@
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="Effects.cpp" />
     <ClCompile Include="Enemies.cpp" />
     <ClCompile Include="GamingLayer.cpp" />
     <ClCompile Include="HeroBulletManager.cpp" />

@@ -123,6 +123,9 @@
     <None Include="..\Resources\bg01.png">
       <Filter>resource</Filter>
     </None>
+    <None Include="..\Resources\explosion.png">
+      <Filter>resource</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="test1.rc">
@@ -157,6 +160,9 @@
     <ClInclude Include="Enemies.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="Effects.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -181,6 +187,9 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Enemies.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Effects.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

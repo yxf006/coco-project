@@ -43,7 +43,7 @@ GamingLayer* GamingLayer::create( int index_hero/*=0*/ )
 	}
 }
 
-bool GamingLayer::GetHero( int index_hero )
+bool GamingLayer::BornHero( int index_hero )
 {
 	CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("Monster.plist","Monster.png");
 	CCString* HeroFrameName=CCString::createWithFormat("Monster%d.png",index_hero);
@@ -139,7 +139,7 @@ void GamingLayer::initLayer()
 		this->schedule(schedule_selector(GamingLayer::Background_Scroll),0.05f);
 
 		//get hero
-		GetHero(m_index_hero);
+		BornHero(m_index_hero);
 
 		m_HeroBulletManager=HeroBulletManager::create();
 
@@ -151,8 +151,8 @@ void GamingLayer::initLayer()
 		//add enemy
 		m_Enemies=Enemies::create();
 		this->addChild(m_Enemies);
-
-		this->Enemy_Add(1);
+		this->schedule(schedule_selector(GamingLayer::Enemy_Add),0.5f);
+		//this->Enemy_Add(1);
 
 	} while (0);
 	
@@ -178,6 +178,19 @@ void GamingLayer::ccTouchMoved( CCTouch *pTouch, CCEvent *pEvent )
 {
 	CCPoint touchpoint=pTouch->getLocation();
 	CCPoint oldtouchpoint=pTouch->getPreviousLocation();
+
+	//防止hero滑出屏幕
+	if (touchpoint.x<0 )
+	{
+		touchpoint.x=0;
+		return;
+	}
+	if (touchpoint.x>s.width)
+	{
+		CCLOG("touchpoint.x>s.width touch x %f",touchpoint.x);
+		touchpoint.x=s.width;
+		return;
+	}
 	CCPoint translateion=ccpSub(touchpoint,oldtouchpoint);
 	CCPoint newpoint=ccpAdd(m_hero->getPosition(),translateion);
 	//m_hero->setPosition(newpoint);//也可以的
@@ -213,4 +226,12 @@ void GamingLayer::Background_Scroll( float t )
 		bg1->setPositionY(0);
 	}
 }
+
+CCSprite* GamingLayer::GetHero()
+{
+	return m_hero;
+}
+
+
+
 

@@ -1,4 +1,7 @@
 #include "HeroBulletManager.h"
+#include "GamingLayer.h"
+#include "Effects.h"
+
 #define OFFSIDE_HEIGHT 1200
 
 HeroBulletManager::HeroBulletManager(void)
@@ -40,6 +43,8 @@ void HeroBulletManager::initLayer()
 		bulletsArray->retain();
 
 		this->schedule(schedule_selector(HeroBulletManager::MoveAllBullets),0.015f);
+
+		Effects::ShareEffects()->PreLoad();
 
 	} while (0);
 	
@@ -94,6 +99,28 @@ void HeroBulletManager::MoveAllBullets(float t)
 		}else
 		{
 			spBullet->setPositionY(spBullet->getPositionY()+10);
+
+			GamingLayer* gameLayer=(GamingLayer*)this->getParent();
+			CCObject* obj;
+			CCARRAY_FOREACH(gameLayer->m_Enemies->GetEnemyArray(),obj){
+
+				CCSprite* spEnemy=(CCSprite*)obj;
+
+				if (spEnemy->boundingBox().containsPoint(spBullet->getPosition()))
+				{
+					//CCLOG("attack ok");
+					Effects::ShareEffects()->boom(gameLayer,spEnemy->getPosition());
+					gameLayer->m_Enemies->removeChild(spEnemy);
+					gameLayer->m_Enemies->GetEnemyArray()->removeObject(spEnemy);
+					break;
+				} 
+				else
+				{
+
+				}
+
+
+			}
 
 		}
 
