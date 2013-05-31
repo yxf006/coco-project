@@ -1,6 +1,7 @@
 #include "Enemies.h"
 #include "GamingLayer.h"
 #include "Effects.h"
+#include "GameOverLayer.h"
 
 Enemies::Enemies(void)
 {
@@ -10,6 +11,8 @@ Enemies::Enemies(void)
 
 Enemies::~Enemies(void)
 {
+	/*CC_SAFE_DELETE_ARRAY(arrayEnenies);
+	CC_SAFE_DELETE_ARRAY(m_arrayBullets);*/
 }
 
 bool Enemies::init()
@@ -212,11 +215,24 @@ void Enemies::MoveAllBullets( float t )
 			if (gameLayer->GetHero()->boundingBox().containsPoint(spEnemyBullet->getPosition())/*spEnemyBullet->boundingBox().containsPoint(gameLayer->GetHero()->getPosition()*/)
 			{
 				CCLOG("Oh,no,Hero is be attacked");
+				CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/shipDestroyEffect.mp3");
 				Effects::ShareEffects()->boom(gameLayer,gameLayer->GetHero()->getPosition());
 				m_bulletBatchNode->removeChild(spEnemyBullet,true);
 				//this->removeChild(spEnemyBullet,true);
 				m_arrayBullets->removeObject(spEnemyBullet,true);
+				
+				//³¡¾°ÇÐ»»µ½gameover
+				gameLayer->stopAllActions();
+				this->removeFromParentAndCleanup(true);
+				//gameLayer->removeAllChildrenWithCleanup(true);
+
+				CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+				CCScene* pscene=GameOverLayer::scene();
+				CCDirector::sharedDirector()->replaceScene(pscene);
+
+				//CCLOG("after CCDirector::sharedDirector()->replaceScene(GameOverLayer::scene())");
 				break;
+				//CCLOG("end CCDirector::sharedDirector()->replaceScene(GameOverLayer::scene())");
 				
 			}
 		

@@ -163,6 +163,9 @@
     <ClInclude Include="Effects.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="GameOverLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -190,6 +193,9 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Effects.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOverLayer.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

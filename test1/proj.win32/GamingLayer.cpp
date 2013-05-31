@@ -151,8 +151,12 @@ void GamingLayer::initLayer()
 		//add enemy
 		m_Enemies=Enemies::create();
 		this->addChild(m_Enemies);
-		this->schedule(schedule_selector(GamingLayer::Enemy_Add),0.5f);
+		this->schedule(schedule_selector(GamingLayer::Enemy_Add),2.0f);
 		//this->Enemy_Add(1);
+
+		//add brackground music
+
+		CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("Music/bgMusic.mp3");
 
 	} while (0);
 	

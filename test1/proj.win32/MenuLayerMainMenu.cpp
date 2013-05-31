@@ -66,6 +66,9 @@ MenuLayerMainMenu::MenuLayerMainMenu( void )
 
 	this->addChild(mainmenu);
 	mainmenu->setPosition(ccp(s.width/2,s.height/2));
+
+	CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("Music/mainMainMusic.mp3");
+	
 }
 
 

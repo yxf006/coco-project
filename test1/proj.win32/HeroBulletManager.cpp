@@ -108,8 +108,11 @@ void HeroBulletManager::MoveAllBullets(float t)
 
 				if (spEnemy->boundingBox().containsPoint(spBullet->getPosition()))
 				{
-					//CCLOG("attack ok");
+					CCLOG("Yeah,Attack enemy ");
+					
+					CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/explodeEffect.mp3");
 					Effects::ShareEffects()->boom(gameLayer,spEnemy->getPosition());
+					
 					gameLayer->m_Enemies->removeChild(spEnemy);
 					gameLayer->m_Enemies->GetEnemyArray()->removeObject(spEnemy);
 					break;

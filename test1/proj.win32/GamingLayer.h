@@ -1,5 +1,7 @@
 #pragma once
 #include "cocos2d.h"
+#include "SimpleAudioEngine.h"
+
 #include "HeroBulletManager.h"
 #include "Enemies.h"
 
