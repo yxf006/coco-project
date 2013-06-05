@@ -45,7 +45,6 @@ bool AppDelegate::applicationDidFinishLaunching()
 void AppDelegate::applicationDidEnterBackground()
 {
     CCDirector::sharedDirector()->stopAnimation();
-
     SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
 }
 
@@ -53,6 +52,5 @@ void AppDelegate::applicationDidEnterBackground()
 void AppDelegate::applicationWillEnterForeground()
 {
     CCDirector::sharedDirector()->startAnimation();
-
     SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
 }

@@ -28,7 +28,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
     //eglView->setFrameSize(480, 320);
 	eglView->setFrameSize(320, 480);
     int ret = CCApplication::sharedApplication()->run();
-
+	
 #ifdef USE_WIN32_CONSOLE
     FreeConsole();
 #endif

@@ -4,6 +4,7 @@
 
 #include "HeroBulletManager.h"
 #include "Enemies.h"
+#include "GameOverLayer.h"
 
 
 USING_NS_CC;
@@ -54,14 +55,14 @@ public:
 	Enemies* m_Enemies;
 
 	CCSprite* GetHero();
-
-
+	HeroBulletManager* m_HeroBulletManager;
+	
 private:
 	CCSize s;
 	int m_index_hero;
 	CCSprite* m_hero;
-	HeroBulletManager* m_HeroBulletManager;
-
+	//HeroBulletManager* m_HeroBulletManager;
+	//GameOverLayer* m_gameoverlayer;
 
 
 };

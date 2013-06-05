@@ -13,6 +13,8 @@ public:
 	CREATE_FUNC(HeroBulletManager);
 
 	void initLayer();
+
+	CCArray*  GetHeroBulletArray();
 private:
 	CCSpriteBatchNode* m_bulletBatchNode;
 	

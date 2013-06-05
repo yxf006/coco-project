@@ -130,3 +130,9 @@ void HeroBulletManager::MoveAllBullets(float t)
 	}
 
 }
+
+CCArray* HeroBulletManager::GetHeroBulletArray()
+{
+	return bulletsArray;
+
+}

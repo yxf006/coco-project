@@ -12,7 +12,7 @@ GameOverLayer::~GameOverLayer(void)
 
 bool GameOverLayer::init()
 {
-	if (!CCLayerColor::initWithColor(ccc4(0,0,0,0)))
+	if (!CCLayerColor::initWithColor(ccc4(0,0,0,50)))
 	{
 		return false;
 	}
@@ -54,16 +54,20 @@ void GameOverLayer::initLayer()
 {
 	CCLabelBMFont* label=CCLabelBMFont::create("You Lose","fonts/bitmapFontTest3.fnt");
 	CCMenuItemLabel* item_gameresult=CCMenuItemLabel::create(label,this,menu_selector(GameOverLayer::menu_Callback)) ;
-
+	item_gameresult->setPosition(CCDirector::sharedDirector()->getWinSize().width/2,CCDirector::sharedDirector()->getWinSize().height/2);
+	//item_gameresult->setAnchorPoint(ccp(0,0));
+	//item_gameresult->setPosition(CCPointZero);
 	//CCLabelBMFont* label_exit=CCLabelBMFont::create("Exit","fonts/bitmapFontTest3.fnt");
 	//CCMenuItemLabel* item_exit=CCMenuItemLabel::create(label_exit,this,menu_selector(GameOverLayer::menu_Callback));
 
 
 	CCMenu* menu=CCMenu::create(item_gameresult,/*item_exit,*/NULL);
-	menu->setPosition(CCDirector::sharedDirector()->getWinSize().width/2,CCDirector::sharedDirector()->getWinSize().height/2);
+	//menu->setPosition(CCDirector::sharedDirector()->getWinSize().width/2,CCDirector::sharedDirector()->getWinSize().height/2);
+	menu->setPosition(CCPointZero);
 	this->addChild(menu);
-	menu->alignItemsVerticallyWithPadding(10);
 
+	//menu->alignItemsVerticallyWithPadding(10);
+	
 	
 
 

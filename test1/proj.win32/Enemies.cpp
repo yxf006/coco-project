@@ -43,7 +43,7 @@ void Enemies::initLayer()
 	this->addChild(m_bulletBatchNode);
 	m_arrayBullets=CCArray::create();
 	m_arrayBullets->retain();
-	//this->schedule(schedule_selector(Enemies::AddNewBullet),0.5f);//不用定时增加，随机的随机敌人增加
+	//this->schedule(schedule_selector(Enemies::AddNewBullet),0.5f);//不用定时增加，随机时间随机敌人增加
 	this->schedule(schedule_selector(Enemies::MoveAllBullets),0.05f);
 
 	Effects::ShareEffects()->PreLoad();
@@ -216,21 +216,28 @@ void Enemies::MoveAllBullets( float t )
 			{
 				CCLOG("Oh,no,Hero is be attacked");
 				CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/shipDestroyEffect.mp3");
-				Effects::ShareEffects()->boom(gameLayer,gameLayer->GetHero()->getPosition());
+				Effects::ShareEffects()->boom_hero(gameLayer,gameLayer->GetHero()->getPosition());
 				m_bulletBatchNode->removeChild(spEnemyBullet,true);
 				//this->removeChild(spEnemyBullet,true);
 				m_arrayBullets->removeObject(spEnemyBullet,true);
-				
+				gameLayer->m_HeroBulletManager->unscheduleAllSelectors();
+				gameLayer->unschedule(schedule_selector(GamingLayer::Hero_Fire));
+				//p->m_HeroBulletManager->GetHeroBulletArray()->removeAllObjects();
+				gameLayer->m_HeroBulletManager->removeAllChildrenWithCleanup(true);
+
+				gameLayer->GetHero()->setVisible(false);//看不见了还在发射子弹哟
 				//场景切换到gameover
-				gameLayer->stopAllActions();
-				this->removeFromParentAndCleanup(true);
+				//gameLayer->stopAllActions();//加了这句，所有动画也不执行了。动画回调也木有了 - -
+				
+				//this->removeFromParentAndCleanup(true);
 				//gameLayer->removeAllChildrenWithCleanup(true);
-
-				CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+				CCLOG("before CCDirector::sharedDirector()->replaceScene(GameOverLayer::scene())");
+				/*CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
 				CCScene* pscene=GameOverLayer::scene();
-				CCDirector::sharedDirector()->replaceScene(pscene);
-
-				//CCLOG("after CCDirector::sharedDirector()->replaceScene(GameOverLayer::scene())");
+				CCDirector::sharedDirector()->replaceScene(pscene);*/
+				CCLOG("after CCDirector::sharedDirector()->replaceScene(GameOverLayer::scene())");
+				
+				//this->unscheduleAllSelectors();
 				break;
 				//CCLOG("end CCDirector::sharedDirector()->replaceScene(GameOverLayer::scene())");
 				
