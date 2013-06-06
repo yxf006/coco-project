@@ -166,6 +166,9 @@
     <ClInclude Include="GameOverLayer.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="AppMacros.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

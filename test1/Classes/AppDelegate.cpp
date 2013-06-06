@@ -1,6 +1,8 @@
 #include "cocos2d.h"
 #include "CCEGLView.h"
 #include "AppDelegate.h"
+#include "AppMacros.h"
+
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
 #include "MenuLayerMainMenu.h"
@@ -24,12 +26,13 @@ bool AppDelegate::applicationDidFinishLaunching()
     CCDirector *pDirector = CCDirector::sharedDirector();
     pDirector->setOpenGLView(CCEGLView::sharedOpenGLView());
 
-    // turn on display FPS
+    CCEGLView::sharedOpenGLView()->setDesignResolutionSize(designResolutionSize.width,designResolutionSize.height,kResolutionNoBorder);
+	// turn on display FPS
     pDirector->setDisplayStats(true);
 
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
-
+	//pDirector->setContentScaleFactor(2.0f);
     // create a scene. it's an autorelease object
     //CCScene *pScene = HelloWorld::scene();
 	CCScene *pScene=CCScene::create();
